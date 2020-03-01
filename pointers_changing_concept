@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+struct node
+{
+    int data;
+    char *c;
+};
+
+void check(node *p)
+{
+    cout<<"\nHere Pointer Address : ";
+    cout<<&p;
+    cout<<"\nHere Pointer Deference Address : ";
+    cout<<&(*p);
+
+}
+
+void check1(node **p)
+{
+    cout<<"\nHere Pointer Address : ";
+    cout<<&p;
+    cout<<"\nHere Pointer Deference Address : ";
+    cout<<&(*p);
+
+}
+
+int main()
+{
+    node *p = NULL;
+    node *q;
+    cout<<"---------Pass by value using Pointers-----------\n";
+    cout<<"\nHere Orignal Pointer Address : ";
+    cout<<&q;
+    check(q);
+
+    cout<<"\n\n---------Pass by Reference using Pointers-----------\n";
+    cout<<"\nHere Orignal Pointer Address : ";
+    cout<<&q;
+    check1(&q);
+    cout<<endl;
+
+    return 0;
+}
